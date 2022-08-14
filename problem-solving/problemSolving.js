@@ -65,7 +65,7 @@ function twoSum(nums, target) {
 // 3. If the sum is greater than 10, add the remainder to the next node
 // 4. If the sum is less than 10, add the sum to the next node
 // Time Complexity: O(n)
-// Space Complexity: O(1)
+// Space Complexity: O(1) 
 
 function addTwoNumbers(l1, l2) {
     let newList = new ListNode(0); // create a new list
@@ -101,7 +101,7 @@ var addTwoNumbers = function (l1, l2) {
         let sum = (l1 && l1.val) + (l2 && l2.val) + carry;
         carry = Math.floor(sum / 10);
         current.next = new ListNode(sum % 10);
-        current = current.next;
+        current = current.next; // next node
         l1 = l1 && l1.next;
         l2 = l2 && l2.next;
     }
