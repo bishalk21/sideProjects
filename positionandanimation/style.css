@@ -1,0 +1,63 @@
+.container {
+  background: blue;
+  height: 90vh;
+  width: 100vh;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.parent {
+  background: #000;
+  height: 60vh;
+  color: white;
+  width: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(white, green);
+  border-radius: 50%;
+
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  animation: circle 2s 10 ease-in-out;
+  /* animation: circle 1s infinite; */
+}
+
+@keyframes circle {
+  0% {
+    left: 10px;
+    top: 10px;
+  }
+
+  25% {
+    left: 300px;
+    top: 10px;
+  }
+
+  50% {
+    left: 300px;
+    top: 75vh;
+  }
+
+  75% {
+    left: 6px;
+    top: 75vh;
+  }
+
+  100% {
+    left: 30px;
+    top: 50px;
+  }
+
+}
