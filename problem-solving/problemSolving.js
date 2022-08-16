@@ -112,3 +112,51 @@ var addTwoNumbers = function (l1, l2) {
 // Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 // Output: 7 -> 0 -> 8
 // Explanation: 342 + 465 = 807.
+
+// Longest Substring Without Repeating Characters
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+// Given a string, find the length of the longest substring without repeating characters.
+// Solution:
+// 1. Create a map to store the characters and their indices
+// 2. Create a start and end pointer
+// 3. Loop through the string and check if the current character is in the map
+// 4. If it is, check if the current index is greater than the start pointer
+// 5. If it is, update the start pointer to the current index
+// 6. If it is not, update the map with the current character and its index
+// 7. Update the end pointer to the current index
+// 8. Return the end pointer - start pointer + 1
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+function lengthOfLongestSubstring(s) {
+    let map = {};
+    let start = 0;
+    let end = 0;
+    let max = 0;
+    while (end < s.length) {
+        if (map[s[end]] !== undefined) {
+            start = Math.max(start, map[s[end]] + 1);
+        }
+        map[s[end]] = end;
+        end++;
+        max = Math.max(max, end - start);
+    }
+    return max;
+}
+
+// Solution 2: 
+var lengthOfLongestSubstring = function (s) {
+    let longest = 0;
+    let current = 0;
+    let map = {};
+
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        if (map[char]) {
+            current = Math.max(current, map[char]);
+        }
+        map[char] = i + 1;
+        longest = Math.max(longest, i - current + 1);
+    }
+
+    return longest;
+};
