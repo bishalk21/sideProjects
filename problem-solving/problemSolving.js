@@ -118,7 +118,7 @@ var addTwoNumbers = function (l1, l2) {
 // Given a string, find the length of the longest substring without repeating characters.
 // Solution:
 // 1. Create a map to store the characters and their indices
-// 2. Create a start and end pointer
+// 2. Create a start and end pointer to keep track of the longest substring
 // 3. Loop through the string and check if the current character is in the map
 // 4. If it is, check if the current index is greater than the start pointer
 // 5. If it is, update the start pointer to the current index
