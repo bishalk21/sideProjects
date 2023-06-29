@@ -63,7 +63,7 @@ function filterFeeds(category) {
   return filteredFeeds;
 }
 
-const likedCategory = "category3";
+const likedCategory = "category1";
 const filteredFeeds = filterFeeds(likedCategory);
 
 displayFeeds(filteredFeeds);
