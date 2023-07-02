@@ -2,6 +2,9 @@ let screenText = document.getElementById("display");
 let result = "";
 let previousStr = "";
 
+// innerText returns the visible text contained in a node
+// textContent returns the full text.
+
 const p1 = () => {
   result += 1 + " ";
   screenText.textContent = result;
